@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idhranaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kolicinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hranaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.restoranDataSet = new WindowsFormsApp2.RestoranDataSet();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,43 +41,13 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idhranaDataGridViewTextBoxColumn,
-            this.kolicinaDataGridViewTextBoxColumn,
-            this.cenaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.hranaBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1169, 649);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // idhranaDataGridViewTextBoxColumn
-            // 
-            this.idhranaDataGridViewTextBoxColumn.DataPropertyName = "id_hrana";
-            this.idhranaDataGridViewTextBoxColumn.HeaderText = "id_hrana";
-            this.idhranaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idhranaDataGridViewTextBoxColumn.Name = "idhranaDataGridViewTextBoxColumn";
-            this.idhranaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // kolicinaDataGridViewTextBoxColumn
-            // 
-            this.kolicinaDataGridViewTextBoxColumn.DataPropertyName = "kolicina";
-            this.kolicinaDataGridViewTextBoxColumn.HeaderText = "kolicina";
-            this.kolicinaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.kolicinaDataGridViewTextBoxColumn.Name = "kolicinaDataGridViewTextBoxColumn";
-            this.kolicinaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // cenaDataGridViewTextBoxColumn
-            // 
-            this.cenaDataGridViewTextBoxColumn.DataPropertyName = "cena";
-            this.cenaDataGridViewTextBoxColumn.HeaderText = "cena";
-            this.cenaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cenaDataGridViewTextBoxColumn.Name = "cenaDataGridViewTextBoxColumn";
-            this.cenaDataGridViewTextBoxColumn.Width = 125;
             // 
             // hranaBindingSource
             // 
@@ -132,8 +99,5 @@
         private RestoranDataSet restoranDataSet;
         private System.Windows.Forms.BindingSource hranaBindingSource;
         private RestoranDataSetTableAdapters.HranaTableAdapter hranaTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idhranaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kolicinaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cenaDataGridViewTextBoxColumn;
     }
 }

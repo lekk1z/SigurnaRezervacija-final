@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,12 @@ namespace WindowsFormsApp2
         private void Form4_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'restoranDataSet.Hrana' table. You can move, or remove it, as needed.
-            this.hranaTableAdapter.Fill(this.restoranDataSet.Hrana);
+            OleDbConnection connection = new OleDbConnection(Properties.Settings.Default.RestoranConnectionString);
+            OleDbCommand command = new OleDbCommand("SELECT Hrana.ime, Hrana.cena, Hrana.kolicina FROM Hrana;", connection);
+            OleDbDataAdapter dataAdapter = new OleDbDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
 
         }
 

@@ -34,7 +34,7 @@ namespace WindowsFormsApp2
             adapter2.Fill(dt2);
             label2.Text = dt2.Rows[0][0].ToString();
             label8.Text = label2.Text;
-            
+            label5.Text=(double.Parse(label2.Text)*0.2).ToString();
 
         }
 
@@ -80,6 +80,75 @@ namespace WindowsFormsApp2
             Form2 nazad = new Form2();
             this.Close();
             nazad.Visible = true;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            double predcena = double.Parse(label2.Text);
+            double ukupno = predcena;
+            if (radioButton1.Checked)
+            {
+                ukupno = predcena;
+            }
+            else if (radioButton2.Checked)
+            {
+                ukupno = predcena + predcena * 0.1;
+            }
+            else if (radioButton3.Checked)
+            {
+                ukupno = predcena + predcena * 0.15;
+            }
+            else if (radioButton4.Checked)
+            {
+                ukupno = predcena + predcena * 0.2;
+            }
+            label8.Text = ukupno.ToString();
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            double predcena = double.Parse(label2.Text);
+            double ukupno = predcena;
+            if (radioButton1.Checked)
+            {
+                ukupno = predcena;
+            }
+            else if (radioButton2.Checked)
+            {
+                ukupno = predcena + predcena * 0.1;
+            }
+            else if (radioButton3.Checked)
+            {
+                ukupno = predcena + predcena * 0.15;
+            }
+            else if (radioButton4.Checked)
+            {
+                ukupno = predcena + predcena * 0.2;
+            }
+            label8.Text = ukupno.ToString();
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            double predcena = double.Parse(label2.Text);
+            double ukupno = predcena;
+            if (radioButton1.Checked)
+            {
+                ukupno = predcena;
+            }
+            else if (radioButton2.Checked)
+            {
+                ukupno = predcena + predcena * 0.1;
+            }
+            else if (radioButton3.Checked)
+            {
+                ukupno = predcena + predcena * 0.15;
+            }
+            else if (radioButton4.Checked)
+            {
+                ukupno = predcena + predcena * 0.2;
+            }
+            label8.Text = ukupno.ToString();
         }
     }
 }
