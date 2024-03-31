@@ -30,29 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.restoranDataSet = new WindowsFormsApp2.RestoranDataSet();
             this.sastavporudzbineBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.restoranDataSet = new WindowsFormsApp2.RestoranDataSet();
+            this.button1 = new System.Windows.Forms.Button();
             this.sastav_porudzbineTableAdapter = new WindowsFormsApp2.RestoranDataSetTableAdapters.Sastav_porudzbineTableAdapter();
-            this.idporudzbineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idhraneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kolicinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restoranDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sastavporudzbineBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restoranDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idporudzbineDataGridViewTextBoxColumn,
-            this.idhraneDataGridViewTextBoxColumn,
-            this.kolicinaDataGridViewTextBoxColumn,
-            this.cenaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.sastavporudzbineBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Left;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -60,6 +49,16 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1181, 673);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // sastavporudzbineBindingSource
+            // 
+            this.sastavporudzbineBindingSource.DataMember = "Sastav_porudzbine";
+            this.sastavporudzbineBindingSource.DataSource = this.restoranDataSet;
+            // 
+            // restoranDataSet
+            // 
+            this.restoranDataSet.DataSetName = "RestoranDataSet";
+            this.restoranDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button1
             // 
@@ -73,51 +72,9 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // restoranDataSet
-            // 
-            this.restoranDataSet.DataSetName = "RestoranDataSet";
-            this.restoranDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sastavporudzbineBindingSource
-            // 
-            this.sastavporudzbineBindingSource.DataMember = "Sastav_porudzbine";
-            this.sastavporudzbineBindingSource.DataSource = this.restoranDataSet;
-            // 
             // sastav_porudzbineTableAdapter
             // 
             this.sastav_porudzbineTableAdapter.ClearBeforeFill = true;
-            // 
-            // idporudzbineDataGridViewTextBoxColumn
-            // 
-            this.idporudzbineDataGridViewTextBoxColumn.DataPropertyName = "id_porudzbine";
-            this.idporudzbineDataGridViewTextBoxColumn.HeaderText = "id_porudzbine";
-            this.idporudzbineDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idporudzbineDataGridViewTextBoxColumn.Name = "idporudzbineDataGridViewTextBoxColumn";
-            this.idporudzbineDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // idhraneDataGridViewTextBoxColumn
-            // 
-            this.idhraneDataGridViewTextBoxColumn.DataPropertyName = "id_hrane";
-            this.idhraneDataGridViewTextBoxColumn.HeaderText = "id_hrane";
-            this.idhraneDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idhraneDataGridViewTextBoxColumn.Name = "idhraneDataGridViewTextBoxColumn";
-            this.idhraneDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // kolicinaDataGridViewTextBoxColumn
-            // 
-            this.kolicinaDataGridViewTextBoxColumn.DataPropertyName = "kolicina";
-            this.kolicinaDataGridViewTextBoxColumn.HeaderText = "kolicina";
-            this.kolicinaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.kolicinaDataGridViewTextBoxColumn.Name = "kolicinaDataGridViewTextBoxColumn";
-            this.kolicinaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // cenaDataGridViewTextBoxColumn
-            // 
-            this.cenaDataGridViewTextBoxColumn.DataPropertyName = "cena";
-            this.cenaDataGridViewTextBoxColumn.HeaderText = "cena";
-            this.cenaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cenaDataGridViewTextBoxColumn.Name = "cenaDataGridViewTextBoxColumn";
-            this.cenaDataGridViewTextBoxColumn.Width = 125;
             // 
             // Form5
             // 
@@ -130,8 +87,8 @@
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restoranDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sastavporudzbineBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restoranDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -143,9 +100,5 @@
         private RestoranDataSet restoranDataSet;
         private System.Windows.Forms.BindingSource sastavporudzbineBindingSource;
         private RestoranDataSetTableAdapters.Sastav_porudzbineTableAdapter sastav_porudzbineTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idporudzbineDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idhraneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kolicinaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cenaDataGridViewTextBoxColumn;
     }
 }

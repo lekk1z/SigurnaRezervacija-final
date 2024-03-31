@@ -23,5 +23,13 @@ namespace WindowsFormsApp2
             this.hranaTableAdapter.Fill(this.restoranDataSet.Hrana);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Form2 konobar = new Form2();
+            this.Close();
+            konobar.Visible = true;
+        }
     }
 }

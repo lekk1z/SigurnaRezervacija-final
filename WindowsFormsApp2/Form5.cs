@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,12 @@ namespace WindowsFormsApp2
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restoranDataSet.Sastav_porudzbine' table. You can move, or remove it, as needed.
-            this.sastav_porudzbineTableAdapter.Fill(this.restoranDataSet.Sastav_porudzbine);
-
+            OleDbConnection connection = new OleDbConnection(Properties.Settings.Default.RestoranConnectionString);
+            OleDbCommand command = new OleDbCommand("SELECT Hrana.ime, Sastav_porudzbine.kolicina\r\nFROM Hrana INNER JOIN Sastav_porudzbine ON Hrana.[id_hrana] = Sastav_porudzbine.[id_hrane];\r\n", connection);
+            OleDbDataAdapter adapter = new OleDbDataAdapter(command);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
 
         private void button1_Click(object sender, EventArgs e)
